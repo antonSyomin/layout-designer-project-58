@@ -1,19 +1,11 @@
 @font-face {
   font-family: 'Open Sans';
   src: url('../fonts/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
-  font-size: 16px;
-  line-height: 1.6em;
-  color: #2A2626;
 }
-
 @font-face {
   font-family: 'Neucha';
   src: url('../fonts/Neucha-Regular.ttf') format('truetype');
-  font-size: 16px;
-  line-height: 1.6em;
-  color: #2A2626
 }
-
 :root {
   --white: #fff;
   --translucent-white: #d7ccc0;
@@ -24,32 +16,71 @@
   --brown: #b09a81;
   --blue: #1085c5;
 }
-
-.hello {
-  display: block;
-  
-  color: #fff;
+.orange {
+  color: var(--base);
 }
-
-h1 {
-  font-family: 'Neucha';
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: #2A2626;
+}
+h1, h2, h3 {
   line-height: 1.2em;
+  font-family: 'Neucha', cursive;
+  margin: 0;
+}
+h1 {
+  z-index: 2;
+  text-align: left;
   font-size: 72px;
 }
-
 h2 {
-  font-family: 'Neucha';
   font-size: 60px;
 }
-
 h3 {
-  font-family: 'Neucha';
   font-size: 34px;
 }
-
-section {
-  text-align: center;
-  max-width: 1110px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+.container {
+    position: relative;
 }
+section  {
+  max-width: 1110px;
+  text-align: center;
+  margin: 100px auto;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";                   
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(245, 244, 240, 0.8), rgba(245, 244, 240, 0.8)), url('../images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  z-index: -1;                  
+}
+img {
+  position: absolute;
+  height: 525px;
+  top: 55px;
+  right: -62px;
+}
+.column {
+  column-count: 2;
+  column-gap: 30px;
+}
+p {
+  text-align: left;
+}
+button {
+  background-color: var(--base);
+  margin: 24px 12px;
+  font-weight: bold;
+  color: var(--white);
+}
+
